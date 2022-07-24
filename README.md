@@ -1,5 +1,5 @@
 <div><!--Stats-->
-  <img height="190" src="https://github-readme-stats.vercel.app/api?username=Cow6oy&show_icons=true&theme=blue"/>
+  <img height="190" src="https://github-readme-stats.vercel.app/api?username=Cow6oy&show_icons=true&theme=pink"/>
 </div>
 
 <br>
