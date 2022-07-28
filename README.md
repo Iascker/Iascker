@@ -1,6 +1,4 @@
-<div><!--Stats-->
-  <img height="190" src="https://github-readme-stats.vercel.app/api?username=Cow6oy&show_icons=true&theme=pink"/>
-</div>
+![Cow6oy GitHub stats](https://github-readme-stats.vercel.app/api?username=cow6oy&show_icons=true&count_private=true&theme=merko)
 
 <br>
 
