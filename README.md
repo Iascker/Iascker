@@ -1,4 +1,4 @@
-![Cow6oy GitHub stats](https://github-readme-stats.vercel.app/api?username=cow6oy&show_icons=true&count_private=true&theme=merko)
+![COW6OY GitHub stats](https://github-readme-stats.vercel.app/api?username=COW6OY&show_icons=true&count_private=true&theme=merko)
 
 <br>
 
