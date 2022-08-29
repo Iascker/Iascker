@@ -35,7 +35,7 @@ repo init -u https://github.com/VoltageOS/manifest -b 12l
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 rm-rf .repo
-git clone git@github.com:VoltageOS-Devices/android_device_xiaomi_surya.git -b 12l device/xiaomi/surya
+git clone git@github.com:VoltageOS-Devices/android_device_xiaomi_surya.git -b 13 device/xiaomi/surya
 git clone git@github.com:VoltageOS-Devices/android_kernel_xiaomi_surya.git -b 12l kernel/xiaomi/surya
 git clone git@github.com:VoltageOS-Devices/android_vendor_xiaomi_surya.git -b 12l vendor/xiaomi/surya
 . build/envsetup.sh && brunch surya
