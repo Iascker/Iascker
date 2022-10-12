@@ -9,7 +9,10 @@ Tutorial Creating a build environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt install git-core -y
+sudo apt-get install python2 -y
 sudo apt-get install python3.9 -y
+sudo apt-get install python3.10 -y
+sudo apt-get install python3.12 -y
 sudo apt-get install python3-pip -y
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "Cow6oy"
@@ -25,8 +28,8 @@ chmod a+x ~/bin/repo
 
 ```bash
 export USE_CCACHE=1
-export CCACHE_DIR=/home/username/.ccache
-ccache -M 50G
+export CCACHE_DIR=/home/aos/.ccache
+ccache -M 80G
 
 ```
 
