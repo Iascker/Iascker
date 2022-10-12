@@ -15,7 +15,10 @@ sudo apt-get install python3.10 -y
 sudo apt-get install python3.12 -y
 sudo apt-get install python3-pip -y
 git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "Cow6oy"
+git config --global user.name "M3zaque"
+sudo apt install zsh -y
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
 sudo apt update -y && sudo apt upgrade -y
 git clone https://github.com/akhilnarang/scripts --depth 1
 cd scripts
@@ -23,6 +26,10 @@ bash setup/android_build_env.sh
 mkdir ~/bin && PATH=~/bin:$PATH
 curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
+
+ssh-keygen -t ed25519 -C "mezackisilva@gmail.com" -y
+cat /home/m3zaque/.ssh/id_ed25519.pub
+
 
 ```
 
