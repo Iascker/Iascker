@@ -47,7 +47,7 @@ cat /home/m3zaque/.ssh/id_ed25519.pub
 
 ```bash
 export USE_CCACHE=1
-export CCACHE_DIR=/home/aos/.ccache
+export CCACHE_DIR=/home/m3zaque/.ccache
 ccache -M 80G
 
 ```
@@ -55,16 +55,6 @@ ccache -M 80G
 ```bash
 repo init -u https://github.com/VoltageOS/manifest -b 12l
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-rm-rf .repo
-
-```
-
-```bash
-git clone git@github.com:VoltageOS-Devices/android_device_xiaomi_surya.git -b 12l device/xiaomi/surya
-git clone git@github.com:EliCarmo/android_kernel_xiaomi_surya.git -b 12l kernel/xiaomi/surya
-git clone git@github.com:VoltageOS-Devices/android_vendor_xiaomi_surya.git -b 12l vendor/xiaomi/surya
-. build/envsetup.sh && brunch surya
 
 ```
 
