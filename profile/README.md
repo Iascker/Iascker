@@ -9,6 +9,7 @@ Tutorial Creating a build environment
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt install git-core -y
+sudo apt-get install python2-minimal:i386 -y
 sudo apt-get install python2 -y
 sudo apt-get install python3.9 -y
 sudo apt-get install python3.10 -y
