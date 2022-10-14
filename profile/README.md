@@ -40,6 +40,7 @@ cd los
 repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 && repo sync -j16
 
 ```
+find / -type f -perm 0777 2>/dev/null
 
 
 
