@@ -38,6 +38,8 @@ export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
 ccache -M 80G
 
+mkdir LOS
+cd LOS
 repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 && repo sync -j16
 
 ```
