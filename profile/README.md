@@ -12,10 +12,7 @@ sudo apt install git-core -y
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "M3zaque"
 
-sudo apt-get install python2 -y
-sudo apt-get install python3 -y
-sudo apt-get install python3.12 -y
-sudo apt-get install python3-pip -y
+sudo apt-get install 2to3 -y && sudo apt-get install python2-minimal:i386 -y && sudo apt-get install python2:i386 -y && sudo apt-get install python2-minimal -y && sudo apt-get install python2 -y && sudo apt-get install dh-python -y && sudo apt-get install python-is-python3 -y && sudo apt-get install python2 -y && sudo apt-get install python3 -y && sudo apt-get install python3.12 -y && sudo apt-get install python3-pip -y
 
 git clone https://github.com/akhilnarang/scripts --depth 1
 cd scripts
@@ -38,8 +35,8 @@ export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
 ccache -M 80G
 
-mkdir LOS
-cd LOS
+mkdir los
+cd los
 repo init -u https://github.com/LineageOS/android.git -b lineage-19.1 && repo sync -j16
 
 ```
