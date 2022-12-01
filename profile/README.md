@@ -45,3 +45,4 @@ find / -type f -perm 0777 2>/dev/null
 
 
 [![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217)](https://t.me/Cow6oy)
+96991103595 ray
