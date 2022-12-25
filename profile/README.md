@@ -10,7 +10,19 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install git-core -y
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "M3zaque"
-sudo apt-get install 2to3 -y && sudo apt-get install python2-minimal:i386 -y && sudo apt-get install python2:i386 -y && sudo apt-get install python2-minimal -y && sudo apt-get install python2 -y && sudo apt-get install dh-python -y && sudo apt-get install python-is-python3 -y && sudo apt-get install python2 -y && sudo apt-get install python3 -y && sudo apt-get install python3.9 -y && sudo apt-get install python3.10 -y && sudo apt-get install python3.11 -y && sudo apt-get install python3-pip -y
+sudo apt-get install 2to3 -y
+sudo apt-get install python2-minimal:i386 -y
+sudo apt-get install python2:i386 -y
+sudo apt-get install python2-minimal -y
+sudo apt-get install python2 -y
+sudo apt-get install dh-python -y
+sudo apt-get install python-is-python3 -y
+sudo apt-get install python2 -y
+sudo apt-get install python3 -y
+sudo apt-get install python3.9 -y
+sudo apt-get install python3.10 -y
+sudo apt-get install python3.11 -y
+sudo apt-get install python3-pip -y
 git clone https://github.com/akhilnarang/scripts --depth 1
 cd scripts
 bash setup/android_build_env.sh
