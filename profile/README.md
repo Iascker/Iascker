@@ -46,9 +46,9 @@ ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
 cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
-git clone git@github.com:VoltageOS-Devices/device_xiaomi_lisa.git device/xiaomi/lisa
+git clone git@github.com:M3zaque/device_xiaomi_lisa.git device/xiaomi/lisa
 git clone git@github.com:Krypton-K/platform_kernel_xiaomi_lisa.git kernel/xiaomi/lisa
-git clone git@github.com:VoltageOS-Devices/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
+git clone git@github.com:M3zaque/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
 git clone https://gitlab.com/ALKALiKong/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
 ```
 ```bash
