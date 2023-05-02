@@ -34,6 +34,9 @@ chmod a+x ~/.bin/repo
 export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
 ccache -M 100G
+```
+```bash
+sudo apt-get install zram-config
 mkdir vos
 cd vos
 repo init -u https://github.com/VoltageOS/manifest.git -b 13
@@ -47,13 +50,11 @@ cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
 git clone git@github.com:M3zaque/device_xiaomi_lisa.git device/xiaomi/lisa
-git clone git@github.com:Krypton-K/platform_kernel_xiaomi_lisa.git kernel/xiaomi/lisa
+git clone git@github.com:M3zaque/kernel_xiaomi_lisa.git kernel/xiaomi/lisa
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
-git clone https://gitlab.com/ALKALiKong/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
-```
-```bash
-. build/envsetup.sh
-brunch lisa
+git clone git@github.com:M3zaque/device_xiaomi_lisa-miuicamera.git -b thirteen device/xiaomi/lisa-miuicamera
+git clone git@github.com:M3zaque/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
+. build/envsetup.sh && brunch lisa
 ```
 ```bash
 sudo apt install zsh -y
@@ -65,9 +66,6 @@ sudo nano /etc/passwd
 ```
 ```bash
 sudo nano .zshrc
-```
-```bash
-sudo apt-get install zram-config
 ```
 
 [![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217991103595)](https://t.me/M3zaque)
