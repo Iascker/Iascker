@@ -65,5 +65,8 @@ git clone git@github.com:M3zaque/device_xiaomi_lisa-miuicamera.git -b thirteen d
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
 . build/envsetup.sh && brunch lisa
 ```
+sudo add-apt-repository -y ppa:gwendal-lebihan-dev/cinnamon-nightly
+sudo apt-get install cinnamon
+sudo apt-get purge --auto-remove cinnamon --auto-remove
 
 [![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217991103595)](https://t.me/M3zaque)
