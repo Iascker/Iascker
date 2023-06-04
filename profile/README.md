@@ -6,30 +6,29 @@ Tutorial Creating a build environment
 ----------------------------------
 
 ```bash
-sudo apt update -y
-sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y
+```
+```bash
 sudo apt install git-core -y
+```
+```bash
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "M3zaque"
+```
+```bash
 sudo apt install zsh -y
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
-sudo apt-get install 2to3 -y
-sudo apt-get install python2-minimal:i386 -y
-sudo apt-get install python2:i386 -y
-sudo apt-get install python2-minimal -y
-sudo apt-get install python2 -y
-sudo apt-get install dh-python -y
-sudo apt-get install python-is-python3 -y
-sudo apt-get install python2 -y
-sudo apt-get install python3 -y
-sudo apt-get install python3.9 -y
-sudo apt-get install python3.10 -y
-sudo apt-get install python3.11 -y
-sudo apt-get install python3-pip -y
-git clone https://github.com/akhilnarang/scripts --depth 1
-cd scripts
-bash setup/android_build_env.sh
+```bash
+sudo nano /etc/passwd
+```
+```bash
+sudo nano .zshrc
+```
+```bash
+sudo apt-get install 2to3 -y && sudo apt-get install python2-minimal:i386 -y && sudo apt-get install python2:i386 -y && sudo && apt-get install python2-minimal -y && sudo apt-get install python2 -y && sudo apt-get install dh-python -y && sudo apt-get install python-is-python3 -y && sudo apt-get install python2 -y && sudo apt-get install python3 -y && sudo apt-get install python3.9 -y && sudo apt-get install python3.10 -y && sudo apt-get install python3.11 -y && sudo apt-get install python3-pip -y && git clone https://github.com/akhilnarang/scripts --depth 1 && cd scripts && bash setup/android_build_env.sh
+```
+```bash
 mkdir ~/.bin
 PATH=~/.bin:$PATH
 curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
@@ -37,12 +36,6 @@ chmod a+x ~/.bin/repo
 export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
 ccache -M 100G
-```
-```bash
-sudo nano /etc/passwd
-```
-```bash
-sudo nano .zshrc
 ```
 ```bash
 sudo apt-get install zram-config
