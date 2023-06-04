@@ -63,8 +63,47 @@ git clone git@github.com:M3zaque/kernel_xiaomi_lisa.git kernel/xiaomi/lisa
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
 git clone git@github.com:M3zaque/device_xiaomi_lisa-miuicamera.git -b thirteen device/xiaomi/lisa-miuicamera
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
-. build/envsetup.sh && brunch lisa
+. build/envsetup.sh && brunch lisa### Sync ###
+
+----------------------------------
+
+```bash
+sudo pacman -Syu
+sudo pacman -Syyu
+sudo pacman -S git-all -y
+git config --global user.email "mezackisilva@gmail.com"
+git config --global user.name "M3zaque"
+sudo pacman -S zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo pacman -S python python-pip python-setuptools -y
+sudo pacman -S jdk8-openjdk -y
+sudo pacman -S pycharm-community -y
+sudo pacman -S postgresql python-psycopg2 -y
+yay -S pycharm-professional --noconfirm -y
+git clone https://github.com/akhilnarang/scripts --depth 1
+cd scripts
+bash setup/arch-manjaro.sh
+mkdir ~/.bin
+PATH=~/.bin:$PATH
+curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
+chmod a+x ~/.bin/repo
+export USE_CCACHE=1
+export CCACHE_DIR=/home/aos/.ccache
+ccache -M 70G
 ```
+```bash
+sudo nano /etc/passwd
+```
+```bash
+sudo nano .zshrc
+```
+```bash
+ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
+```
+```bash
+cat /home/aos/.ssh/id_ed25519.pub
+```
+
 sudo add-apt-repository -y ppa:gwendal-lebihan-dev/cinnamon-nightly
 sudo apt-get install cinnamon
 sudo apt-get purge --auto-remove cinnamon --auto-remove
