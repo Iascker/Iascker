@@ -63,7 +63,9 @@ git clone git@github.com:M3zaque/kernel_xiaomi_lisa.git kernel/xiaomi/lisa
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
 git clone git@github.com:M3zaque/device_xiaomi_lisa-miuicamera.git -b thirteen device/xiaomi/lisa-miuicamera
 git clone git@github.com:M3zaque/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
-. build/envsetup.sh && brunch lisa### Sync ###
+. build/envsetup.sh && brunch lisa
+
+### Sync ###
 
 ----------------------------------
 
