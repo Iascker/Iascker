@@ -12,6 +12,12 @@ Install git
 ```bash
 sudo apt install git-core -y
 ```
+```bash
+sudo apt install ccache -y
+```
+```bash
+sudo apt install curl -y
+```
 Sync your git account
 ```bash
 git config --global user.email "mezackisilva@gmail.com"
@@ -41,7 +47,7 @@ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/re
 chmod a+x ~/.bin/repo
 export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
-ccache -M 100G
+ccache -M 70G
 ```
 Install zram config
 ```bash
