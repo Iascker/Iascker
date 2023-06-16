@@ -51,6 +51,8 @@ sudo apt-get install python3.10 -y
 sudo apt-get install python3.11 -y
 sudo apt-get install python3-pip -y
 pip3 install overleaf-sync
+```
+```bash
 sudo apt install gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev
 ```
 dependencies
