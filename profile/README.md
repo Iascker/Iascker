@@ -7,15 +7,8 @@ Tutorial Creating a build environment
 Update the linux
 ```bash 
 sudo apt update -y && sudo apt upgrade -y
-```
-Install git
-```bash
 sudo apt install git-core -y
-```
-```bash
 sudo apt install ccache -y
-```
-```bash
 sudo apt install curl -y
 ```
 Sync your git account
@@ -28,8 +21,6 @@ git config --global user.name "M3zaque"
 sudo apt install zsh -y
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 sh install.sh
-```
-```bash
 sudo nano .zshrc
 ```
 ```bash
