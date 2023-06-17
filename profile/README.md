@@ -22,7 +22,7 @@ sudo bash debloat-mint.sh
 Sync your git account
 ```bash
 git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "M3zaque"
+git config --global user.name "KimiNiTodock"
 ```
 (optional) configure zsh
 ```bash
