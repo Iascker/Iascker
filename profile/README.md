@@ -66,4 +66,4 @@ git clone git@github.com:KimiNiTodock/android_device_xiaomi_camera vendor/xiaomi
 
 ----------------------------------
 
-[![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217991103595)](https://t.me/M3zaque)
+[![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217991103595)](https://t.me/KimiNiTodock)
