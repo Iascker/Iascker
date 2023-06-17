@@ -15,7 +15,7 @@ git clone https://github.com/akhilnarang/scripts --depth 1
 cd scripts
 bash setup/android_build_env.sh
 git clone git@github.com:KimiNiTodock/Linux-Mint-Debloater.git
-cd cd Linux-Mint-Debloater
+cd Linux-Mint-Debloater
 chmod +x debloat-mint.sh
 sudo bash debloat-mint.sh
 ```
