@@ -55,12 +55,11 @@ cat /home/aos/.ssh/id_ed25519.pub
 ```bash
 mkdir vos
 cd vos
-repo init -u https://github.com/VoltageOS/manifest.git -b 13
-repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-git clone git@github.com:M3zaque/android_device_xiaomi_lisa.git device/xiaomi/lisa
-git clone git@github.com:M3zaque/android_kernel_xiaomi_lisa.git kernel/xiaomi/lisa
-git clone git@github.com:M3zaque/android_vendor_xiaomi_lisa.git vendor/xiaomi/lisa
-git clone git@github.com:M3zaque/android_device_xiaomi_camera.git vendor/xiaomi/camera
+repo init -u https://github.com/VoltageOS/manifest.git -b 13 && repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
+git clone git@github.com:KimiNiTodock/android_device_xiaomi_lisa device/xiaomi/lisa
+git clone git@github.com:KimiNiTodock/android_kernel_xiaomi_lisa kernel/xiaomi/lisa
+git clone git@github.com:KimiNiTodock/android_vendor_xiaomi_lisa vendor/xiaomi/lisa
+git clone git@github.com:KimiNiTodock/android_device_xiaomi_camera vendor/xiaomi/camera
 . build/envsetup.sh && brunch lisa
 ```
 ### Sync ###
