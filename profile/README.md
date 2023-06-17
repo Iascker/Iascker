@@ -7,50 +7,29 @@ Tutorial Creating a build environment
 Update the linux
 ```bash 
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install git-core -y
-sudo apt install ccache -y
-sudo apt install curl -y
-```
-Sync your git account
-```bash
-git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "M3zaque"
-```
-(optional) install and configure zsh
-```bash
-sudo apt install zsh -y
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh
-sudo nano .zshrc
-```
-```bash
-sudo nano /etc/passwd
-```
-Install python and system dependencies
-```bash
-sudo apt-get install 2to3 -y
-sudo apt-get install python2-minimal:i386 -y
-sudo apt-get install python2:i386 -y
-sudo apt-get install python2-minimal -y
-sudo apt-get install python2 -y
-sudo apt-get install dh-python -y
-sudo apt-get install python-is-python3 -y
-sudo apt-get install python2 -y
-sudo apt-get install python3 -y
-sudo apt-get install python3.9 -y
-sudo apt-get install python3.10 -y
-sudo apt-get install python3.11 -y
-sudo apt-get install python3-pip -y
-pip3 install overleaf-sync
-```
-```bash
-sudo apt install gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev
+sudo apt install git-core ccache curl zsh 2to3 python2-minimal:i386 python2:i386 python2-minimal python2 dh-python python-is-python3 python2 python3 python3.9 python3.10 python3.11 python3-pip overleaf-sync gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
 ```
 dependencies
 ```bash
 git clone https://github.com/akhilnarang/scripts --depth 1
 cd scripts
 bash setup/android_build_env.sh
+```
+Sync your git account
+```bash
+git config --global user.email "mezackisilva@gmail.com"
+git config --global user.name "M3zaque"
+```
+(optional) configure zsh
+```bash
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+```
+```bash
+sudo nano .zshrc
+```
+```bash
+sudo nano /etc/passwd
 ```
 Configure the repo command
 ```bash
@@ -62,10 +41,6 @@ export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
 ccache -M 70G
 ```
-Install zram config
-```bash
-sudo apt-get install zram-config
-```
 Sync an ssh key to git
 ```bash
 ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
@@ -74,18 +49,14 @@ ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
 cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
-sudo apt-get install meson
-```
-```bash
 mkdir vos
 cd vos
 repo init -u https://github.com/VoltageOS/manifest.git -b 13
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-git clone git@github.com:M3zaque/device_xiaomi_lisa.git device/xiaomi/lisa
-git clone git@github.com:M3zaque/kernel_xiaomi_lisa.git kernel/xiaomi/lisa
-git clone git@github.com:M3zaque/vendor_xiaomi_lisa.git vendor/xiaomi/lisa
-git clone git@github.com:M3zaque/device_xiaomi_lisa-miuicamera.git -b thirteen device/xiaomi/lisa-miuicamera
-git clone git@github.com:M3zaque/vendor_xiaomi_lisa-miuicamera.git -b thirteen vendor/xiaomi/lisa-miuicamera
+git clone git@github.com:M3zaque/android_device_xiaomi_lisa.git device/xiaomi/lisa
+git clone git@github.com:M3zaque/android_kernel_xiaomi_lisa.git kernel/xiaomi/lisa
+git clone git@github.com:M3zaque/android_vendor_xiaomi_lisa.git vendor/xiaomi/lisa
+git clone git@github.com:M3zaque/android_device_xiaomi_camera.git vendor/xiaomi/camera
 . build/envsetup.sh && brunch lisa
 ```
 ### Sync ###
