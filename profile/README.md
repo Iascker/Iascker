@@ -12,7 +12,7 @@ sudo apt install git-core ccache curl zsh 2to3 python2 dh-python python-is-pytho
 git config
 ```bash
 git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "KimiNiTodock"
+git config --global user.name "Zyyjz"
 ```
 dependencies
 ```bash
