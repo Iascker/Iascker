@@ -9,6 +9,11 @@ Update the linux
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install git-core ccache curl zsh 2to3 python2-minimal:i386 python2:i386 python2-minimal python2 dh-python python-is-python3 python2 python3 python3.10 python3.11 python3-pip gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
 ```
+Sync your git account
+```bash
+git config --global user.email "mezackisilva@gmail.com"
+git config --global user.name "KimiNiTodock"
+```
 dependencies
 ```bash
 git clone https://github.com/akhilnarang/scripts --depth 1
@@ -18,11 +23,6 @@ git clone git@github.com:KimiNiTodock/Linux-Mint-Debloater.git
 cd Linux-Mint-Debloater
 chmod +x debloat-mint.sh
 sudo bash debloat-mint.sh
-```
-Sync your git account
-```bash
-git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "KimiNiTodock"
 ```
 (optional) configure zsh
 ```bash
