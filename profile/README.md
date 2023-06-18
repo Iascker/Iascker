@@ -7,11 +7,9 @@ Tutorial Creating a build environment
 Update the linux
 ```bash 
 sudo apt update -y && sudo apt upgrade -y
+sudo apt install git-core ccache curl zsh 2to3 python2 dh-python python-is-python3 python2 python3 python3.10 python3.11 python3-pip gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
 ```
-```bash 
-sudo apt install git-core ccache curl zsh 2to3 python2-minimal:i386 python2:i386 python2-minimal python2 dh-python python-is-python3 python2 python3 python3.10 python3.11 python3-pip gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
-```
-Sync your git account
+git config
 ```bash
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "KimiNiTodock"
