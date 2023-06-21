@@ -10,33 +10,8 @@ git clone git@github.com:Zyyjz/scripts.git --depth 1
 cd scripts
 bash setup/android_build_env.sh
 ```
-(optional) configure zsh
-```bash
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-sh install.sh
-```
-```bash
-sudo nano .zshrc
-```
 ```bash
 sudo nano /etc/passwd
-```
-Configure the repo command
-```bash
-mkdir ~/.bin
-PATH=~/.bin:$PATH
-curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-chmod a+x ~/.bin/repo
-export USE_CCACHE=1
-export CCACHE_DIR=/home/aos/.ccache
-ccache -M 70G
-```
-Sync an ssh key to git
-```bash
-ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
-```
-```bash
-cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
 mkdir vos
