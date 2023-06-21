@@ -10,10 +10,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt purge firefox celluloid drawing fonts-tlwg-norasi-ttf fonts-tlwg-purisa fonts-tlwg-purisa-ttf fonts-tlwg-sawasdee fonts-tlwg-sawasdee-ttf fonts-tlwg-typewriter fonts-tlwg-typewriter-ttf fonts-tlwg-typist fonts-tlwg-typist-ttf fonts-tlwg-typo fonts-tlwg-typo-ttf fonts-tlwg-umpush fonts-tlwg-umpush-ttf fonts-tlwg-waree fonts-tlwg-waree-ttf gnome-disk-utility gnome-system-monitor gnome-calculator gnote gnome-calendar gnome-logs gnome-power-manager hexchat hexchat-common hypnotix libreoffice libreoffice-core libreoffice-common mintwelcome mintbackup mintupdate onboard pix rhythmbox redshift simple-scan sticky system-config-printer synaptic seahorse thingy thunderbird timeshift transmission-gtk xviewer xreader warpinator youtube-dl -y && sudo add-apt-repository universe && sudo apt-get install libncurses5 libncurses5:i386 -y
 ```
 ```bash
-sudo apt install git-core ccache curl zsh 2to3 python2 dh-python python-is-python3 python2 python3 python3.10 python3.11 python3-pip gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
-```
-git config
-```bash
+sudo apt install git-core ccache curl zsh 2to3 dh-python python-is-python3 python3 python3.11 python3-pip gobject-introspection gtk-doc-tools intltool libgirepository1.0-dev libgspell-1-dev libgtk-3-dev libgtksourceview-4-dev libpeas-dev libxapp-dev zram-config -y
 git config --global user.email "mezackisilva@gmail.com"
 git config --global user.name "Zyyjz"
 ```
