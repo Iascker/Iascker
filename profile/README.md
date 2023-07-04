@@ -27,6 +27,21 @@ ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
 cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
+sudo apt-get install 2to3 -y
+sudo apt-get install python2-minimal:i386 -y
+sudo apt-get install python2:i386 -y
+sudo apt-get install python2-minimal -y
+sudo apt-get install python2 -y
+sudo apt-get install dh-python -y
+sudo apt-get install python-is-python3 -y
+sudo apt-get install python2 -y
+sudo apt-get install python3 -y
+sudo apt-get install python3.9 -y
+sudo apt-get install python3.10 -y
+sudo apt-get install python3.11 -y
+sudo apt-get install python3-pip -y
+```
+```bash
 mkdir vos
 cd vos
 repo init -u https://github.com/VoltageOS/manifest.git -b 13 && repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
