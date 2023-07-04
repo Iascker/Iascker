@@ -4,7 +4,9 @@ Tutorial Creating a build environment
 ### Sync ###
 
 ----------------------------------
-dependencies
+```bash
+sudo apt update -y && sudo apt upgrade -y
+```
 ```bash
 git clone git@github.com:Zyyjz/scripts.git --depth 1
 cd scripts
@@ -12,6 +14,17 @@ bash setup/android_build_env.sh
 ```
 ```bash
 sudo nano /etc/passwd
+```
+```bash
+export USE_CCACHE=1
+export CCACHE_DIR=/home/aos/.ccache
+ccache -M 100G
+```
+```bash
+ssh-keygen -t ed25519 -C "mezackisilva@gmail.com"
+```
+```bash
+cat /home/aos/.ssh/id_ed25519.pub
 ```
 ```bash
 mkdir vos
