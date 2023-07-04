@@ -16,19 +16,25 @@ PACKAGES=""
 sudo apt install software-properties-common -y
 sudo apt update
 
+LSB_RELEASE="$(lsb_release -d | cut -d ':' -f 2 | sed -e 's/^[[:space:]]*//')"
+
+if [[ ${LSB_RELEASE} =~ "Ubuntu 20" || ${LSB_RELEASE} =~ "Ubuntu 21" || ${LSB_RELEASE} =~ "Ubuntu 22" || ${LSB_RELEASE} =~ 'Pop!_OS 2' ]]; then
 # Install lsb-core packages
 sudo apt install lsb-core -y
-
-LSB_RELEASE="$(lsb_release -d | cut -d ':' -f 2 | sed -e 's/^[[:space:]]*//')"
+fi
 
 if [[ ${LSB_RELEASE} =~ "Mint 18" || ${LSB_RELEASE} =~ "Ubuntu 16" ]]; then
     PACKAGES="${UBUNTU_16_PACKAGES}"
-elif [[ ${LSB_RELEASE} =~ "Ubuntu 20" || ${LSB_RELEASE} =~ "Ubuntu 21" || ${LSB_RELEASE} =~ "Ubuntu 22" || ${LSB_RELEASE} =~ 'Pop!_OS 2' ]]; then
+elif [[ ${LSB_RELEASE} =~ "Ubuntu 20" || ${LSB_RELEASE} =~ "Ubuntu 21" || ${LSB_RELEASE} =~ "Ubuntu 22" || ${LSB_RELEASE} =~ "Ubuntu 23" || ${LSB_RELEASE} =~ 'Pop!_OS 2' ]]; then
     PACKAGES="${UBUNTU_20_PACKAGES}"
 elif [[ ${LSB_RELEASE} =~ "Debian GNU/Linux 10" ]]; then
     PACKAGES="${DEBIAN_10_PACKAGES}"
 elif [[ ${LSB_RELEASE} =~ "Debian GNU/Linux 11" ]]; then
     PACKAGES="${DEBIAN_11_PACKAGES}"
+fi
+
+if [[ ${LSB_RELEASE} =~ "Ubuntu 20" || ${LSB_RELEASE} =~ "Ubuntu 21" || ${LSB_RELEASE} =~ "Ubuntu 22" || ${LSB_RELEASE} =~ 'Pop!_OS 2' ]]; then
+sudo apt install python-all-dev -y
 fi
 
 sudo DEBIAN_FRONTEND=noninteractive \
@@ -40,10 +46,30 @@ sudo DEBIAN_FRONTEND=noninteractive \
     libexpat1-dev libgmp-dev '^liblz4-.*' '^liblzma.*' libmpc-dev libmpfr-dev libncurses5-dev \
     libsdl1.2-dev libssl-dev libtool libxml2 libxml2-utils '^lzma.*' lzop \
     maven ncftp ncurses-dev patch patchelf pkg-config pngcrush \
-    pngquant python2.7 python-all-dev re2c schedtool squashfs-tools subversion \
+    pngquant re2c schedtool squashfs-tools subversion \
     texinfo unzip w3m xsltproc zip zlib1g-dev lzip \
     libxml-simple-perl libswitch-perl apt-utils \
+    python3-pip zram-config python3 python3-pip \
+    python-is-python3 libc6-dev-i386
     ${PACKAGES} -y
+
+echo -e "Intalling Extra Packages Python"
+sudo apt-get install 2to3 -y
+sudo apt-get install python2-minimal:i386 -y
+sudo apt-get install python2-minimal -y
+sudo apt-get install python2:i386 -y
+sudo apt-get install python2 -y
+sudo apt-get install python3 -y
+sudo apt-get install python3.9 -y
+sudo apt-get install python3.10 -y
+sudo apt-get install python3.11 -y
+sudo apt-get install python3-pip -y
+sudo apt-get install dh-python -y
+sudo apt-get install python-is-python3 -y
+sudo add-apt-repository universe -y
+sudo apt-get install libncurses5 libncurses5:i386 -y
+    
+pip3 install thefuck -y
 
 echo -e "Installing GitHub CLI"
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
@@ -69,3 +95,38 @@ fi
 echo "Installing repo"
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
+
+echo "Define git username and e-mail"
+git config --global user.email "mezackisilva@gmail.com"
+git config --global user.name "Milsapz"
+
+echo "Define ccache"
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+ccache -M 100G
+
+# Check whether zsh is installed or not
+command -v zsh > /dev/null || {
+    echo "Please install zsh yourself before running this script!"
+    exit 1
+}
+
+# Install oh-my-zsh in unattended mode - no prompts to change shell, or open a zsh prompt after it completes
+echo "Installing oh-my-zsh"
+sudo apt install zsh -y
+zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Clone in powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git "$HOME"/.oh-my-zsh/custom/themes/powerlevel10k
+
+# Change oh-my-zsh theme to powerlevel10k
+echo "Changing default powerlevel10k theme from 'robbyrussell' to 'powerlevel10k/powerlevel10k'"
+sed -i -e 's|ZSH_THEME="robbyrussell"|ZSH_THEME="powerlevel10k/powerlevel10k"|' "$HOME"/.zshrc
+
+# Copy p10k config
+echo "Copying powerlevel10k configuration"
+cp -v "$(dirname "$0")"/.p10k.zsh "$HOME"/
+
+# Ensure p10k config is included
+echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> "$HOME/.zshrc"
