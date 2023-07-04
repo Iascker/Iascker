@@ -30,10 +30,10 @@ cat /home/aos/.ssh/id_ed25519.pub
 mkdir vos
 cd vos
 repo init -u https://github.com/VoltageOS/manifest.git -b 13 && repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-git clone git@github.com:Zyyjz/android_device_xiaomi_lisa device/xiaomi/lisa
-git clone git@github.com:Zyyjz/android_kernel_xiaomi_lisa kernel/xiaomi/lisa
-git clone git@github.com:Zyyjz/android_vendor_xiaomi_lisa vendor/xiaomi/lisa
-git clone git@github.com:Zyyjz/android_device_xiaomi_camera vendor/xiaomi/camera
+git clone git@github.com:Milsapz/android_device_xiaomi_lisa device/xiaomi/lisa
+git clone git@github.com:ghostrider-reborn/android_kernel_xiaomi_lahaina -b topaz kernel/xiaomi/lisa
+git clone https://gitlab.com/PixelOS-Devices/vendor_xiaomi_lisa.git -b thirteen vendor/xiaomi/lisa
+git clone https://gitlab.com/ghostrider-reborn/proprietary_vendor_xiaomi_camera.git vendor/xiaomi/camera
 . build/envsetup.sh && brunch lisa
 ```
 ### Sync ###
