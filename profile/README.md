@@ -5,7 +5,7 @@ Tutorial Creating a build environment
 
 ----------------------------------
 ```bash
-sudo apt update -y && sudo apt upgrade -y sudo apt install git-core -y
+sudo apt update -y && sudo apt upgrade -y && sudo apt install git-core -y
 ```
 ```bash
 git clone git@github.com:Milsapz/scripts.git --depth 1
