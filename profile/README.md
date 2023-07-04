@@ -8,7 +8,7 @@ Tutorial Creating a build environment
 sudo apt update -y && sudo apt upgrade -y
 ```
 ```bash
-git clone git@github.com:Zyyjz/scripts.git --depth 1
+git clone git@github.com:Milsapz/scripts.git --depth 1
 cd scripts
 bash setup/android_build_env.sh
 ```
