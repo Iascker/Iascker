@@ -76,7 +76,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt update
-sudo apt install -y gh
+sudo apt install -y
 
 echo -e "Setting up udev rules for adb!"
 sudo curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules -O -L https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules
@@ -98,12 +98,12 @@ sudo chmod a+rx /usr/local/bin/repo
 
 echo "Define git username and e-mail"
 git config --global user.email "mezackisilva@gmail.com"
-git config --global user.name "Milsapz"
+git config --global user.name "Iascker"
 
 echo "Define ccache"
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
-ccache -M 100G
+ccache -M 20G
 
 # Check whether zsh is installed or not
 command -v zsh > /dev/null || {
