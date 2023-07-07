@@ -66,6 +66,7 @@ sudo apt-get install python3.11 -y
 sudo apt-get install python3-pip -y
 sudo apt-get install dh-python -y
 sudo apt-get install python-is-python3 -y
+sudo apt install zsh -y
 sudo add-apt-repository universe -y
 sudo apt-get install libncurses5 libncurses5:i386 -y
     
@@ -110,11 +111,7 @@ command -v zsh > /dev/null || {
     echo "Please install zsh yourself before running this script!"
     exit 1
 }
-
-echo "Installing oh-my-zsh"
-sudo apt install zsh -y
 zsh
-
 # Install oh-my-zsh in unattended mode - no prompts to change shell, or open a zsh prompt after it completes
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
