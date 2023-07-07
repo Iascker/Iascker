@@ -111,7 +111,6 @@ command -v zsh > /dev/null || {
     echo "Please install zsh yourself before running this script!"
     exit 1
 }
-zsh
 # Install oh-my-zsh in unattended mode - no prompts to change shell, or open a zsh prompt after it completes
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -128,3 +127,4 @@ cp -v "$(dirname "$0")"/.p10k.zsh "$HOME"/
 
 # Ensure p10k config is included
 echo "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh" >> "$HOME/.zshrc"
+zsh
