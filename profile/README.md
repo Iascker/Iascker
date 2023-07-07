@@ -40,6 +40,7 @@ sudo apt-get install python3.9 -y
 sudo apt-get install python3.10 -y
 sudo apt-get install python3.11 -y
 sudo apt-get install python3-pip -y
+sudo apt install python3-pylint-common -y
 ```
 ```bash
 mkdir vos
