@@ -111,12 +111,11 @@ command -v zsh > /dev/null || {
     exit 1
 }
 
-# Install oh-my-zsh in unattended mode - no prompts to change shell, or open a zsh prompt after it completes
 echo "Installing oh-my-zsh"
 sudo apt install zsh -y
-
 zsh
 
+# Install oh-my-zsh in unattended mode - no prompts to change shell, or open a zsh prompt after it completes
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Clone in powerlevel10k
