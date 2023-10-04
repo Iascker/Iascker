@@ -52,6 +52,16 @@ git clone https://gitlab.com/PixelOS-Devices/vendor_xiaomi_lisa.git -b thirteen 
 git clone https://gitlab.com/ghostrider-reborn/proprietary_vendor_xiaomi_camera.git vendor/xiaomi/camera
 . build/envsetup.sh && brunch lisa
 ```
+```bash
+git clone git@github.com:Exy2100-LOS/android_device_samsung_o1s.git -b lineage-20 device/samsung/o1s
+git clone git@github.com:Exy2100-LOS/android_vendor_samsung_o1s.git -b lineage-20 vendor/samsung/o1s
+git clone git@github.com:LineageOS/android_device_samsung_slsi_sepolicy.git -b lineage-20 device/samsung_slsi/sepolicy
+git clone git@github.com:Exy2100-LOS/android_device_samsung_universal2100-common.git -b lineage-20 device/samsung/universal2100-common
+git clone git@github.com:Exy2100-LOS/android_vendor_samsung_universal2100-common.git -b lineage-20 vendor/samsung/universal2100-common
+git clone git@github.com:Exy2100-LOS/proprietary_vendor_firmware.git -b lineage-20 vendor/firmware
+git clone git@github.com:LineageOS/android_hardware_samsung.git -b lineage-20 hardware/samsung
+git clone git@github.com:Exy2100-LOS/android_kernel_samsung_o1s.git -b lineage-20 kernel/samsung/o1s
+```
 ### Sync ###
 
 ----------------------------------
