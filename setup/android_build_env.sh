@@ -98,13 +98,13 @@ sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleap
 sudo chmod a+rx /usr/local/bin/repo
 
 echo "Define git username and e-mail"
-git config --global user.email "mezackisilva@gmail.com"
+git config --global user.email "mezackisilver@gmail.com"
 git config --global user.name "Iascker"
 
 echo "Define ccache"
 export USE_CCACHE=1
-export CCACHE_EXEC=/usr/bin/ccache
-ccache -M 20G
+export CCACHE_DIR=/home/aos/.ccache
+ccache -M 200G
 
 # Check whether zsh is installed or not
 command -v zsh > /dev/null || {
