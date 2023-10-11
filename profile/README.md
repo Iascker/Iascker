@@ -62,6 +62,18 @@ git clone git@github.com:Exy2100-LOS/proprietary_vendor_firmware.git -b lineage-
 git clone git@github.com:LineageOS/android_hardware_samsung.git -b lineage-20 hardware/samsung
 git clone git@github.com:Exy2100-LOS/android_kernel_samsung_o1s.git -b lineage-20 kernel/samsung/o1s
 ```
+```
+git clone git@github.com:Exynos-982X/android_vendor_samsung_beyond1lte -b 14.0 vendor/samsung/beyond1lte
+git clone git@github.com:Exynos-982X/android_hardware_samsung_slsi-linaro_config -b 14.0 hardware/samsung_slsi-linaro/config
+git clone git@github.com:Exynos-982X/android_hardware_samsung_slsi-linaro_exynos -b 14.0 hardware/samsung_slsi-linaro/exynos
+git clone git@github.com:Exynos-982X/android_hardware_samsung_slsi-linaro_exynos5 -b 14.0 hardware/samsung_slsi-linaro/exynos5
+git clone git@github.com:Exynos-982X/android_hardware_samsung_slsi-linaro_graphics -b 14.0 hardware/samsung_slsi-linaro/graphics
+git clone git@github.com:Exynos-982X/android_hardware_samsung_slsi-linaro_openmax -b 14.0 hardware/samsung_slsi-linaro/openmax
+git clone git@github.com:Exynos-982X/android_hardware_samsung -b 14.0 hardware/samsung
+git clone git@github.com:Exynos-982X/android_device_samsung_slsi_sepolicy -b 14.0 device/samsung_slsi/sepolicy
+git clone git@github.com:Exynos-982X/android_vendor_samsung_exynos9820-common -b 14.0 vendor/samsung/exynos9820-common
+git clone git@github.com:Exynos-982X/android_kernel_samsung_exynos9820 -b 14.0 kernel/samsung/exynos9820
+```
 ### Sync ###
 
 ----------------------------------
