@@ -8,7 +8,7 @@ Tutorial Creating a build environment
 sudo apt update -y && sudo apt upgrade -y && sudo apt install git-core -y
 ```
 ```bash
-git clone git@github.com:Iascker/scripts.git --depth 1
+git clone --depth 1 git@github.com:Iascker/Iascker.git -b master scripts
 cd scripts
 bash setup/android_build_env.sh
 ```
