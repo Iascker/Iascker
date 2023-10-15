@@ -43,24 +43,11 @@ sudo apt-get install python3-pip -y
 sudo apt install python3-pylint-common -y
 ```
 ```bash
-mkdir vos
-cd vos
-repo init -u https://github.com/VoltageOS/manifest.git -b 13 && repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
-git clone git@github.com:Milsapz/android_device_xiaomi_lisa device/xiaomi/lisa
-git clone git@github.com:ghostrider-reborn/android_kernel_xiaomi_lahaina -b topaz kernel/xiaomi/lisa
-git clone https://gitlab.com/PixelOS-Devices/vendor_xiaomi_lisa.git -b thirteen vendor/xiaomi/lisa
-git clone https://gitlab.com/ghostrider-reborn/proprietary_vendor_xiaomi_camera.git vendor/xiaomi/camera
+git clone git@github.com:Iascker/android_device_xiaomi_lisa device/xiaomi/lisa
+git clone git@github.com:VoltageOS-Devices/android_kernel_xiaomi_lisa kernel/xiaomi/lisa
+git clone git@github.com:VoltageOS-Devices/android_vendor_xiaomi_lisa vendor/xiaomi/lisa
+git clone git@github.com:dasshubham762/vendor_xiaomi_camera-lisa vendor/xiaomi/camera
 . build/envsetup.sh && brunch lisa
-```
-```bash
-git clone git@github.com:Iascker/android_device_samsung_o1s.git -b lineage-20 device/samsung/o1s
-git clone git@github.com:Exy2100-LOS/android_vendor_samsung_o1s.git -b lineage-20 vendor/samsung/o1s
-git clone git@github.com:LineageOS/android_device_samsung_slsi_sepolicy.git -b lineage-20 device/samsung_slsi/sepolicy
-git clone git@github.com:Iascker/android_device_samsung_universal2100-common.git device/samsung/universal2100-common
-git clone git@github.com:Exy2100-LOS/android_vendor_samsung_universal2100-common.git -b lineage-20 vendor/samsung/universal2100-common
-git clone git@github.com:Exy2100-LOS/proprietary_vendor_firmware.git -b lineage-20 vendor/firmware
-git clone git@github.com:LineageOS/android_hardware_samsung.git -b lineage-20 hardware/samsung
-git clone git@github.com:Iascker/android_kernel_samsung_universal2100.git kernel/samsung/universal2100
 ```
 ```
 git clone git@github.com:Exynos-982X/android_vendor_samsung_beyond1lte -b 14.0 vendor/samsung/beyond1lte
