@@ -18,7 +18,7 @@ sudo nano /etc/passwd
 ```bash
 export USE_CCACHE=1
 export CCACHE_DIR=/home/aos/.ccache
-ccache -M 100G
+ccache -M 200G
 ```
 ```bash
 ssh-keygen -t ed25519 -C "mezaquegit@gmail.com"
