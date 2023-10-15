@@ -21,7 +21,7 @@ export CCACHE_DIR=/home/aos/.ccache
 ccache -M 100G
 ```
 ```bash
-ssh-keygen -t ed25519 -C "mezackisilver@gmail.com"
+ssh-keygen -t ed25519 -C "mezaquegit@gmail.com"
 ```
 ```bash
 cat /home/aos/.ssh/id_ed25519.pub
