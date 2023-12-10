@@ -65,4 +65,6 @@ git clone git@github.com:Exynos-982X/android_kernel_samsung_exynos9820 -b 14.0 k
 
 ----------------------------------
 
+99162-7249
+
 [![TG chat](https://img.shields.io/badge/Support-Telegram-%23e52c5f.svg?style=for-the-badge&logo=telegram&&labelColor=121217991103595)](https://t.me/KimiNiTodock)
